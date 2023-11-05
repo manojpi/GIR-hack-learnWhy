@@ -46,6 +46,7 @@ export default function Dashboard() {
                 </form>
             </div>
         </div>
+    <Footer />
   </div>
   )
 }
