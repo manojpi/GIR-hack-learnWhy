@@ -1,12 +1,37 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import Navbar from './components/partials/navbar';
-import Footer from './components/partials/footer';
+import axios from 'axios';
 
 export default function Dashboard() {
-  return (
 
+    const [auth, setAuth] = useState(false);
+    const [name, setName] = useState('');
+
+    axios.defaults.withCredentials = true;
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/api/v1/dashboard')
+        .then((res) => {
+            if(res.data.Success === true){
+                setAuth(true);
+                setName(res.data.name);
+            } else{
+                setAuth(false);
+                navigate('/login');
+            }
+        })
+        .catch(err => console.log(err))
+    }, [])
+
+  return (
     <div className='bg-gradient-to-r from-purple-400 via-blue-400 to-green-200 h-screen'>
         <Navbar role="student"/>
+        { auth && 
+            <div>Hello</div>
+        }
 
         <div className=''>
             <div className='grid grid-rows-2 gap-y-20 pt-28'>
@@ -38,7 +63,7 @@ export default function Dashboard() {
                     <div className="text-center">
                     <button
                         type="submit"
-                        className="bg-blue-500 w-40 uppercase text-white py-3 font-semi-bold rounded-full tracking-widest" style={{ fontSize: "20px" }}
+                        className="bg-blue-500 w-40 uppercase text-white mb-5 py-3 font-semi-bold rounded-full tracking-widest" style={{ fontSize: "20px" }}
                     >
                         Submit
                     </button>
@@ -46,7 +71,6 @@ export default function Dashboard() {
                 </form>
             </div>
         </div>
-    <Footer />
   </div>
   )
 }
