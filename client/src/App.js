@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+
 import LandingPage from './components/landingPage';
 import Login from './components/user/login';
 import Dashboard from './dashboard';
