@@ -9,7 +9,7 @@ export default function Signup() {
   return (
     <div className='bg-gradient-to-r from-purple-400 via-blue-400 to-green-200 h-screen'>
         <Navbar role="student"/>
-        <div class="flex pt-36 flex-col justify-center px-6 lg:px-8">
+        <div class="flex pt-28 flex-col justify-center px-6 lg:px-8">
             <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                 <img class="mx-auto h-15 w-auto" src="https://img.icons8.com/?size=80&id=m1yuWcowVSGK&format=png" alt="Know Why" />
                 <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Signup in to your account</h2>

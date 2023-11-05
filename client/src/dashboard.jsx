@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from './components/partials/navbar';
+import Footer from './components/partials/footer';
 
 export default function Dashboard() {
   return (
@@ -8,7 +9,7 @@ export default function Dashboard() {
         <Navbar role="student"/>
 
         <div className=''>
-            <div className='grid grid-rows-2 gap-y-20 pt-52'>
+            <div className='grid grid-rows-2 gap-y-20 pt-28'>
                 <h1 className="text-5xl text-white text-center font-black" style={{ fontSize: "70px" }}>Know Why</h1>
             </div>
         </div>
