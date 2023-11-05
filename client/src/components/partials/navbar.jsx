@@ -18,11 +18,9 @@ export default function Navbar({ role }) {
         <Link to="/student/signup"><button
                 type="submit"
                 className="bg-slate-50 w-40 uppercase text-dark py-3 font-semi-bold rounded-full tracking-widest hover:bg-slate-400 hover:text-white" style={{ fontSize: "15px" }}
-                className="bg-slate-50 w-40 uppercase text-dark py-3 font-semi-bold rounded-full tracking-widest hover:bg-slate-400 hover:text-white" style={{ fontSize: "15px" }}
             >
-                { role }
+                {role}
             </button>
-        </Link>
         </Link>
         </li>
       </ul>
