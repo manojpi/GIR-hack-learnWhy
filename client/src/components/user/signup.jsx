@@ -1,23 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../partials/navbar';
 import { Link } from 'react-router-dom';
 
-export default function Login() {
+export default function Signup() {
+
+    const [role, setRole] = useState('');
+
   return (
     <div className='bg-gradient-to-r from-purple-400 via-blue-400 to-green-200 h-screen'>
-        <Navbar role="student" />
+        <Navbar role="student"/>
         <div class="flex pt-36 flex-col justify-center px-6 lg:px-8">
             <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                 <img class="mx-auto h-15 w-auto" src="https://img.icons8.com/?size=80&id=m1yuWcowVSGK&format=png" alt="Know Why" />
-                <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Login in to your account</h2>
+                <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Signup in to your account</h2>
             </div>
 
             <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                 <form class="space-y-6" action="#" method="POST">
                 <div>
+                    <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Enter Username</label>
+                    <div class="mt-2">
+                        <input id="name" name="name" type="name" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                    </div>
+                </div>
+                <div>
                     <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
                     <div class="mt-2">
-                    <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
+                        <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                     </div>
                 </div>
 
@@ -39,8 +48,8 @@ export default function Login() {
                 </form>
 
                 <p class="mt-10  text-center text-sm text-white-500">
-                Don't have an account? 
-                <Link to="/student/signup" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"> Sign up</Link>
+                Already a registered member? 
+                <Link to="/login" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"> Login</Link>
                 </p>
             </div>
         </div>

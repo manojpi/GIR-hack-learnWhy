@@ -5,7 +5,7 @@ export default function Dashboard() {
   return (
 
     <div className='bg-gradient-to-r from-purple-400 via-blue-400 to-green-200 h-screen'>
-        <Navbar />
+        <Navbar role="student"/>
 
         <div className=''>
             <div className='grid grid-rows-2 gap-y-20 pt-52'>
