@@ -8,8 +8,8 @@ export default function LandingPage() {
     <div className='h-screen bg-gradient-to-r from-purple-300 via-blue-300 to-green-200'>
       <Navbar role="sign up" /><div className=''>
             <div className='grid grid-rows-2 pt-52'>
-                <h1 className="text-5xl text-white text-center font-black" style={{ fontSize: "70px" }}>Lorem Ipsum</h1>
-                <div className="mt-10 text-white text-center font-black" style={{ fontSize: "40px" }}>Neque porro quisquam est qui dolorem ipsum quia </div>
+                <h1 className="text-5xl text-white text-center font-black" style={{ fontSize: "70px" }}>Know what you are learning</h1>
+                <div className="mt-10 text-white text-center font-black" style={{ fontSize: "40px" }}>You should know how things connect!! </div>
             </div>
             <div>
               <div className='flex flex-row justify-center mt-20'>
